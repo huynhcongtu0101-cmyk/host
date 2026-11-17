@@ -1,16 +1,217 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+
+    <title>Trang lưu trữ | Kỹ Thuật In Thiên Kim</title>
+    <meta name="description" content="Đây là trang lưu trữ của Kỹ Thuật In Thiên Kim. Vui lòng truy cập trang chính để xem nội dung.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 15% 20%, #1e3a5f 0, transparent 35%),
+                radial-gradient(circle at 85% 80%, #172d48 0, transparent 35%),
+                #101827;
+            color: #fff;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .logo {
+            width: 82px;
+            height: 82px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 22px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #e5ad48, #b87919);
+            box-shadow: 0 10px 35px rgba(220,160,55,.2);
+            font-size: 34px;
+            font-weight: 900;
+            color: #172033;
+            letter-spacing: -3px;
+        }
+
+        .brand {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #e6b85c;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(30px, 6vw, 43px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .description {
+            color: #aab6c8;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 490px;
+            margin: 0 auto 30px;
+        }
+
+        .notice {
+            border: 1px solid rgba(255,255,255,.1);
+            background: rgba(255,255,255,.045);
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            color: #d5deeb;
+            font-size: 14px;
+        }
+
+        .notice strong {
+            color: #f1c46d;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 30px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f0c36c, #d69a35);
+            color: #172033;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 800;
+            transition: .25s;
+            box-shadow: 0 8px 25px rgba(214,154,53,.18);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(214,154,53,.3);
+        }
+
+        .button span {
+            font-size: 20px;
+        }
+
+        .footer {
+            margin-top: 55px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            color: #65748a;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: #d9b66f;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 22px;
+            }
+
+            .logo {
+                width: 72px;
+                height: 72px;
+                font-size: 30px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .notice {
+                padding: 18px;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>Hello, World!</h1>
-  <p>Welcome to my website.</p>
+    <main class="container">
 
-  <script src="script.js"></script>
+        <div class="logo">TK</div>
+
+        <div class="brand">Kỹ Thuật In Thiên Kim</div>
+
+        <h1>Trang lưu trữ</h1>
+
+        <p class="description">
+            Bạn đang truy cập vào khu vực lưu trữ dữ liệu
+            của <strong>Kỹ Thuật In Thiên Kim</strong>.
+        </p>
+
+        <div class="notice">
+            Đây không phải là trang nội dung chính thức.
+            <br>
+            Vui lòng chuyển về <strong>trang chủ Thiên Kim</strong>
+            để xem các thông tin, dịch vụ và nội dung mới nhất.
+        </div>
+
+        <a class="button" href="https://thienkim.top">
+            <span>←</span>
+            TRUY CẬP TRANG CHÍNH
+        </a>
+
+        <div class="footer">
+            © <span id="year"></span> Kỹ Thuật In Thiên Kim
+            <br>
+            Website chính thức:
+            <a href="https://thienkim.top">thienkim.top</a>
+            <br>
+            Lưu trữ dữ liệu và tài nguyên.
+        </div>
+
+    </main>
+
+    <script>
+        // Tự động cập nhật năm
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
 </body>
 </html>
